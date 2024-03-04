@@ -12,7 +12,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const loginResponse = await fetch('https://api.cvimport.com/api/auth/login', {
+      const loginResponse = await fetch('https://34.31.246.232/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
