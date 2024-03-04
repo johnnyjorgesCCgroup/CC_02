@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import IndexTicket from '../views/Ticket/index';
-import IndexHooks from '../views/Hooks/Index';
+import IndexHooks from '../views/Hooks/index';
 import IndexInventory from '../views/Inventory/index';
 import IndexDashboard from '../views/Dashboard/index';
 import './ProtectedRoutes.css'
