@@ -1,0 +1,49 @@
+/* Ticket.css */
+.help-desk-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .action-button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .ticket-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .ticket-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ticket-title {
+    font-weight: bold;
+  }
+  
+  .ticket-status {
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  
+  /* Estilos para diferentes estados */
+  .ticket-status.open {
+    color: green;
+  }
+  
+  .ticket-status.inprogress {
+    color: orange;
+  }
+  
+  .ticket-status.closed {
+    color: red;
+  }
+  
