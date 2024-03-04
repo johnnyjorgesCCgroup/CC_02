@@ -1,36 +1,10 @@
-import { useEffect, useState } from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { useAuth } from './AuthContext';
+import { Routes, Route } from 'react-router-dom';
 import IndexTicket from '../views/Ticket/index';
 import IndexHooks from '../views/Hooks/index';
 import IndexInventory from '../views/Inventory/index';
 import IndexDashboard from '../views/Dashboard/index';
-import './ProtectedRoutes.css'
-
 
 const ProtectedRoutes = () => {
-  const { isLoggedIn } = useAuth();
-  const [authChecked, setAuthChecked] = useState(false);
-
-  useEffect(() => {
-    const checkAuth = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setAuthChecked(true);
-    };
-
-    checkAuth();
-  }, []);
-
-  if (!authChecked) {
-    return <div className='Cargando1' style={{ color: '#00FF88' }}>
-    Cargando<span className='DotAnimation'>.</span>
-  </div>;
-  }
-
-  if (!isLoggedIn) {
-    return <Navigate to="/login" />;
-  }
-
   return (
     <Routes>
       <Route path="/" element={<IndexTicket />} />
